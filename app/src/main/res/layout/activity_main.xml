@@ -4,16 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cyan"
     tools:context=".MainActivity">
 
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:hint="Username"
+        android:id="@+id/Username"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:background="@color/white"
+        android:layout_below="@+id/Username"
+        android:id="@+id/Password"
+        android:layout_centerHorizontal="true"
+        />
+
     <Button
-        android:id="@+id/mainPage"
+        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Next Page"
-        android:onClick="nextPage"/>
+        android:text="Login"
+        android:background="@color/yellow_costal"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnLogin"
+        android:layout_marginBottom="10dp"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textSize="15dp"
+        android:layout_below="@+id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/or"
+        android:layout_marginBottom="10dp"
+        />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_below="@+id/or"
+        android:background="@color/yellow_costal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnRegister"
+        />
 
 </RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Page"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:hint="Full Name"
+        android:id="@+id/regFullName"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:background="@color/white"
+        android:layout_below="@+id/regFullName"
+        android:id="@+id/regUsername"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:background="@color/white"
+        android:layout_below="@+id/regUsername"
+        android:id="@+id/regPassword"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:background="@color/white"
+        android:layout_below="@+id/regPassword"
+        android:id="@+id/regConfirmPass"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:background="@color/yellow_costal"
+        android:layout_below="@+id/regConfirmPass"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/regBtnRegister"
+        android:layout_marginBottom="10dp"
+        />
+
+
+</RelativeLayout>
