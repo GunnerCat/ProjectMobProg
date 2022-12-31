@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
                         String password = Password.getText().toString();
 
                         if(username.isEmpty() || password.isEmpty()){//If user doesn't input anything
-                            Toast.makeText(MainActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Please enter username and password", Toast.LENGTH_LONG).show();
                         }else{
                             Boolean checkUser = dbHelp.checkUsername(username);
                             Boolean checkPass = dbHelp.checkPassword(username, password);
                             if(!checkUser || !checkPass){//If user doesn't exist or password is wrong
-                                Toast.makeText(MainActivity.this, "Please the correct username or password", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Please enter the correct username or password", Toast.LENGTH_LONG).show();
                             }else{//Login successfully
                                 openHomePage();
                             }

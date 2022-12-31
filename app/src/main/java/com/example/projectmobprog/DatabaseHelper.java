@@ -12,7 +12,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     SQLiteDatabase db;
 
-    public static final String databaseName = "TheDatabase";
+    public static final String databaseName = "TheDatabase.db";
 
     public DatabaseHelper(Context context) {
         super(context, databaseName, null, 1);

@@ -33,9 +33,9 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String fullname = regFullName.getText().toString();
-                        String username = regFullName.getText().toString();
-                        String password = regFullName.getText().toString();
-                        String confirmpassword = regFullName.getText().toString();
+                        String username = regUsername.getText().toString();
+                        String password = regPassword.getText().toString();
+                        String confirmpassword = regConfirmPass.getText().toString();
 
                         if(fullname.isEmpty() || username.isEmpty() || password.isEmpty() || confirmpassword.isEmpty()){//If field is empty
                             Toast.makeText(RegisterActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
