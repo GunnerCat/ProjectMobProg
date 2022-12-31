@@ -59,17 +59,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openHomePage();
-            }
-        });
     }
 
     public void openHomePage(){
-        Intent intent = new Intent(this, MainPage.class);
+        Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);//redirect to home page
     }
 
