@@ -27,6 +27,7 @@
         android:background="@color/white"
         android:layout_below="@+id/Username"
         android:id="@+id/Password"
+        android:password="true"
         android:layout_centerHorizontal="true"
         />
 
