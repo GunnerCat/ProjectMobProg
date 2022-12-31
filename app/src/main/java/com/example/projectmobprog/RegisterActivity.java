@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void openHomePage(){
-        Intent intent = new Intent(this, MainPage.class);
+        Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);//redirect to home page
     }
 }

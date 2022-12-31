@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class MainPage extends AppCompatActivity {
+public class HomePage extends AppCompatActivity {
     RecyclerView listing;
     ArrayList<Item> listItem;
     ItemAdapter adapter;
