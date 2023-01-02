@@ -1,9 +1,13 @@
 package com.example.projectmobprog;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,4 +75,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);//redirect to home page
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.account_menu, menu);
+        return true;
+    }
+
+   @Override
+   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       return super.onOptionsItemSelected(item);
+   }
 }
