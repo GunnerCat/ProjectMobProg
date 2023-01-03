@@ -18,52 +18,59 @@
         android:textSize="30dp"
         android:layout_marginTop="50dp"
         />
-
-    <TextView
-        android:id="@+id/text1"
+    <RelativeLayout
+        android:id="@+id/usernameLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvViewAccount"
-        android:layout_marginTop="150dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:layout_marginLeft="75dp"
-        android:text="Username: "
-        />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center">
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Username: "
+            />
 
-    <TextView
-        android:id="@+id/tvUsername"
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="this is Username"
+            android:textColor="@color/black"
+            android:layout_marginTop="150dp"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/text1"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fullnameLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="this is Username"
-        android:textColor="@color/black"
-        android:layout_marginTop="150dp"
-        android:textSize="20dp"
-        android:layout_below="@+id/tvViewAccount"
-        android:layout_toRightOf="@+id/text1"
-        />
+        android:layout_below="@+id/usernameLayout"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Full Name: "
+            />
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text1"
-        android:textColor="@color/black"
-        android:layout_marginLeft="75dp"
-        android:textSize="20dp"
-        android:text="Full Name: "
-        />
-
-    <TextView
-        android:id="@+id/tvFullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="this is Full Name"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:layout_below="@+id/tvUsername"
-        android:layout_toRightOf="@+id/text2"
-        />
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="this is Full Name"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/text2"
+            />
+    </RelativeLayout>
 
     <Button
         android:layout_marginTop="300dp"
@@ -72,7 +79,7 @@
         android:text="Update Account"
         android:padding="10dp"
         android:background="@color/yellow_costal"
-        android:layout_below="@+id/text2"
+        android:layout_below="@+id/fullnameLayout"
         android:layout_centerHorizontal="true"
         android:id="@+id/btnUpdateViewAccount"
         android:layout_marginBottom="10dp"
