@@ -24,7 +24,7 @@
         android:layout_marginTop="250dp"
         android:padding="15dp"
         android:background="@color/white"
-        android:hint="Username"
+        android:hint="Username!"
         android:id="@+id/Username"
         android:layout_centerHorizontal="true"
         />
