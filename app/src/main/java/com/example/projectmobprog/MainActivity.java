@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
         //Login
         Username = (EditText) findViewById(R.id.Username);
         Password = (EditText) findViewById(R.id.Password);
@@ -78,14 +76,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);//redirect to home page
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.account_menu, menu);
-        return true;
-    }
-   @Override
-   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-       return super.onOptionsItemSelected(item);
-   }
 }
