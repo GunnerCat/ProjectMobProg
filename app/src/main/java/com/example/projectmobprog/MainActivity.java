@@ -80,4 +80,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);//redirect to home page
     }
 
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+    }
 }

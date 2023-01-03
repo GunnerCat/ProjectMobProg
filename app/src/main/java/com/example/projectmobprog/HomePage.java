@@ -93,14 +93,10 @@ public class HomePage extends AppCompatActivity {
                 return true;
             }
 
-//            case R.id.deleteAccount:{
-//                Intent getIntent = getIntent();
-//                String username = getIntent.getStringExtra("username");
-//
-//                Intent intent = new Intent(this, UpdateAccountActivity.class);
-//                intent.putExtra("username", username);
-//                startActivity(intent);
-//            }
+            case R.id.deleteAccount:{
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
 
             default: return super.onOptionsItemSelected(item);
         }
