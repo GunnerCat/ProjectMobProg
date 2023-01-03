@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.projectmobprog.login.DatabaseHelper;
-import com.example.projectmobprog.login.RegisterActivity;
 
 public class UpdateAccountActivity extends AppCompatActivity {
 

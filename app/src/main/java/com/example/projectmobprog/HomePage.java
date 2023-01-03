@@ -73,15 +73,15 @@ public class HomePage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-//            case R.id.viewAccount:{
-//                Intent getIntent = getIntent();
-//                String username = getIntent.getStringExtra("username");
-//
-//                Intent intent = new Intent(this, UpdateAccountActivity.class);
-//                intent.putExtra("username", username);
-//                startActivity(intent);
-//                return true;
-//            }
+            case R.id.viewAccount:{
+                Intent getIntent = getIntent();
+                String username = getIntent.getStringExtra("username");
+
+                Intent intent = new Intent(this, ViewAccountActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+                return true;
+            }
 
             case R.id.updateAccount:{
                 Intent getIntent = getIntent();

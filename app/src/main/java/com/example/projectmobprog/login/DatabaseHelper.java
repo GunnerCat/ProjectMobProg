@@ -65,6 +65,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(q);
     }
 
+    public String getFullName(String username){
+        String name = null;
+
+        db = this.getWritableDatabase();
+        String q = "SELECT * FROM users WHERE username ='"+username+"'";
+        Cursor cursor = db.rawQuery(q, null);
+        if(cursor.moveToFirst()){
+            name = cursor.getString(1);
+        }
+
+        return name;
+    }
+
     public void deleteAccount(String username){
         db = this.getWritableDatabase();
         String q = "DELETE FROM users WHERE username = '"+username+"'";
