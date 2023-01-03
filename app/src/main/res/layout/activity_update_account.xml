@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cyan"
-    tools:context=".login.RegisterActivity">
+    tools:context=".UpdateAccountActivity"
+    android:background="@color/cyan">
 
     <TextView
+        android:id="@+id/tvUpdateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="Update Account"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -21,23 +22,24 @@
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:padding="15dp"
         android:background="@color/white"
-        android:hint="Full Name"
-        android:id="@+id/regFullName"
+        android:hint="Username"
+        android:id="@+id/updateUsername"
+        android:layout_below="@+id/tvUpdateAccount"
         android:layout_centerHorizontal="true"
         />
 
     <EditText
-        android:layout_marginTop="25dp"
-        android:padding="15dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:hint="Username"
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
         android:background="@color/white"
-        android:layout_below="@+id/regFullName"
-        android:id="@+id/regUsername"
+        android:hint="Full name"
+        android:id="@+id/updateFullName"
+        android:layout_below="@+id/updateUsername"
         android:layout_centerHorizontal="true"
         />
 
@@ -48,9 +50,9 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:background="@color/white"
-        android:password="true"
-        android:layout_below="@+id/regUsername"
-        android:id="@+id/regPassword"
+        android:layout_below="@+id/updateFullName"
+        android:id="@+id/updatePassword"
+        android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         />
 
@@ -60,24 +62,23 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
-        android:password="true"
         android:background="@color/white"
-        android:layout_below="@+id/regPassword"
-        android:id="@+id/regConfirmPass"
+        android:layout_below="@+id/updatePassword"
+        android:id="@+id/updateConfirmPass"
+        android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         />
 
     <Button
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="Update"
         android:background="@color/yellow_costal"
-        android:layout_below="@+id/regConfirmPass"
+        android:layout_below="@+id/updateConfirmPass"
         android:layout_centerHorizontal="true"
-        android:id="@+id/regBtnRegister"
+        android:id="@+id/btnUpdate"
         android:layout_marginBottom="10dp"
         />
-
 
 </RelativeLayout>

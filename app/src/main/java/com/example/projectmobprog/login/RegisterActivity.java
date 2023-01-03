@@ -35,8 +35,8 @@ public class RegisterActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String fullname = regFullName.getText().toString();
                         String username = regUsername.getText().toString();
+                        String fullname = regFullName.getText().toString();
                         String password = regPassword.getText().toString();
                         String confirmpassword = regConfirmPass.getText().toString();
 
@@ -64,7 +64,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void openHomePage(){
+        EditText Username = (EditText) findViewById(R.id.regUsername);
+        String username = Username.getText().toString();
+
         Intent intent = new Intent(this, HomePage.class);
-        startActivity(intent);//redirect to home page
+        intent.putExtra("username", username);
+        startActivity(intent);
     }
 }

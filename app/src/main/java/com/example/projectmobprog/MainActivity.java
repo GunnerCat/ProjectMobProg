@@ -67,7 +67,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openHomePage(){
+        Username = (EditText) findViewById(R.id.Username);
+        String username = Username.getText().toString();
+
         Intent intent = new Intent(this, HomePage.class);
+        intent.putExtra("username", username);
         startActivity(intent);//redirect to home page
     }
 

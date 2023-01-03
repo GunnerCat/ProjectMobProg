@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -71,7 +72,38 @@ public class HomePage extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()){
+//            case R.id.viewAccount:{
+//                Intent getIntent = getIntent();
+//                String username = getIntent.getStringExtra("username");
+//
+//                Intent intent = new Intent(this, UpdateAccountActivity.class);
+//                intent.putExtra("username", username);
+//                startActivity(intent);
+//                return true;
+//            }
+
+            case R.id.updateAccount:{
+                Intent getIntent = getIntent();
+                String username = getIntent.getStringExtra("username");
+
+                Intent intent = new Intent(this, UpdateAccountActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+                return true;
+            }
+
+//            case R.id.deleteAccount:{
+//                Intent getIntent = getIntent();
+//                String username = getIntent.getStringExtra("username");
+//
+//                Intent intent = new Intent(this, UpdateAccountActivity.class);
+//                intent.putExtra("username", username);
+//                startActivity(intent);
+//            }
+
+            default: return super.onOptionsItemSelected(item);
+        }
     }
 
 }

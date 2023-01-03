@@ -3,21 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/item1"
+        android:id="@+id/iconAccount"
         android:icon="@drawable/ic_account_icon"
-        android:title="item1"
+        android:title="icon"
         app:showAsAction="ifRoom">
 
         <menu>
 
             <item
-                android:id="@+id/item2"
+                android:id="@+id/viewAccount"
+                android:title="View Account"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/updateAccount"
                 android:title="Update Account"
                 app:showAsAction="never"
                 />
 
             <item
-                android:id="@+id/item3"
+                android:id="@+id/deleteAccount"
                 android:title="Delete Account"
                 app:showAsAction="never"
                 />

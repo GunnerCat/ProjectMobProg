@@ -59,9 +59,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    public void updateAccount(String username, String name, String password){
+    public void updateAccount(String oldUsername, String username, String name, String password){
         db = this.getWritableDatabase();
-        String q = "UPDATE users SET password = '"+ password +"', name = '"+ name +"' WHERE username = '"+ username +"'";
+        String q = "UPDATE users SET password = '"+ password +"', name = '"+ name +"', username = '"+ username +"' WHERE username = '"+ oldUsername +"'";
         db.execSQL(q);
     }
 
