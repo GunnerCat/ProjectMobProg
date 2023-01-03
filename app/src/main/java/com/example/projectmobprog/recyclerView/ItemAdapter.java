@@ -1,4 +1,4 @@
-package com.example.projectmobprog;
+package com.example.projectmobprog.recyclerView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.projectmobprog.R;
 
 import java.util.ArrayList;
 
@@ -30,7 +32,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position) {
         Item item = listItem.get(position);
-        holder.itemText.setText(item.text);
+        holder.itemText.setText(item.getText());
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.projectmobprog;
+package com.example.projectmobprog.login;
 
 import android.content.ContentValues;
 import android.content.Context;
