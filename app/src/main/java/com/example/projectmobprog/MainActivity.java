@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.example.projectmobprog.login.DatabaseHelper;
+import com.example.projectmobprog.login.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
@@ -20,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     EditText Username, Password;
     Button btnLogin, btnRegister;
     DatabaseHelper dbHelp;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         );
 
         btnRegister.setOnClickListener(
-
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View view) {

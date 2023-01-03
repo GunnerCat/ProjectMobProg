@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.projectmobprog.recyclerView.Item;
+import com.example.projectmobprog.recyclerView.ItemAdapter;
+
 import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
@@ -20,22 +23,22 @@ public class HomePage extends AppCompatActivity {
         listItem = new ArrayList<>();
 
         Item item1 = new Item();
-        item1.text = "text1";
+        item1.setText("text1");
 
         Item item2 = new Item();
-        item2.text = "text2";
+        item2.setText("text2");
 
         Item item3 = new Item();
-        item3.text = "text3";
+        item3.setText("text3");
 
         Item item4 = new Item();
-        item4.text = "text4";
+        item4.setText("text4");
 
         Item item5 = new Item();
-        item5.text = "text5";
+        item5.setText("text5");
 
         Item item6 = new Item();
-        item6.text = "text6";
+        item5.setText("text5");
 
         for (int i = 0; i < 10; i++) {
             listItem.add(item1);
