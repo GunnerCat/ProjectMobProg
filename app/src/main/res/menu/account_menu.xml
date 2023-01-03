@@ -23,7 +23,7 @@
                 />
 
             <item
-                android:id="@+id/deleteAccount"
+                android:id="@+id/logout"
                 android:title="Log out"
                 app:showAsAction="never"
                 />
