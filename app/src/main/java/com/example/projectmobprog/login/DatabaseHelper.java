@@ -43,7 +43,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Boolean checkUsername(String username){
         db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", new String[] {username});
+        String q = "SELECT * FROM users WHERE username = '"+ username +"'";
+        Cursor cursor = db.rawQuery(q, null);
         if (cursor.getCount() > 0) return true;
 
         return false;
@@ -51,9 +52,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Boolean checkPassword(String username, String password){
         db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ? AND password = ?", new String[] {username, password} );
+        String q = "SELECT * FROM users WHERE username = '"+ username +"' AND password = '"+ password +"'";
+        Cursor cursor = db.rawQuery(q, null );
         if(cursor.getCount() > 0) return true;
 
         return false;
+    }
+
+    public void updateAccount(String username, String name, String password){
+        db = this.getWritableDatabase();
+        String q = "UPDATE users SET password = '"+ password +"', name = '"+ name +"' WHERE username = '"+ username +"'";
+        db.execSQL(q);
+    }
+
+    public void deleteAccount(String username){
+        db = this.getWritableDatabase();
+        String q = "DELETE FROM users WHERE username = '"+username+"'";
+        db.execSQL(q);
     }
 }
