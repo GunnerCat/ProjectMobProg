@@ -59,6 +59,8 @@ public class UpdateAccountActivity extends AppCompatActivity {
     public void openHomePage(String newUsername){
         Intent intent = new Intent(this, HomePage.class);
         intent.putExtra("username", newUsername);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 }

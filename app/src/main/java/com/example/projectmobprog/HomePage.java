@@ -93,9 +93,8 @@ public class HomePage extends AppCompatActivity {
                 return true;
             }
 
-            case R.id.deleteAccount:{
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
+            case R.id.logout:{
+                finish();
             }
 
             default: return super.onOptionsItemSelected(item);
