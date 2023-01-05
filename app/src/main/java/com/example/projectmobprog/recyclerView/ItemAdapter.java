@@ -32,7 +32,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position) {
         Item item = listItem.get(position);
-        holder.itemText.setText(item.getText());
+        holder.price.setText(Integer.toString(item.getPrice()));
+        holder.title.setText(item.getTitle());
     }
 
     @Override
@@ -41,10 +42,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView itemText;
+        TextView title;
+        TextView price;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemText = itemView.findViewById(R.id.itemText);
+            title = itemView.findViewById(R.id.itemTitle);
+            price = itemView.findViewById(R.id.itemPrice);
         }
     }
 }
