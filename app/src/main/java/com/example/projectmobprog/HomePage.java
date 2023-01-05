@@ -8,14 +8,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.projectmobprog.recyclerView.Item;
 import com.example.projectmobprog.recyclerView.ItemAdapter;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomePage extends AppCompatActivity {
     RecyclerView listing;
@@ -26,46 +34,54 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
+
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
         listing = findViewById(R.id.listing);
         listItem = new ArrayList<>();
 
-        Item item1 = new Item();
-        item1.setText("text1");
+        getItems();
 
-        Item item2 = new Item();
-        item2.setText("text2");
+    }
+    private void getItems() {
+        Call<Products> call = RetrofitClient.getInstance().getMyApi().getList();
+        call.enqueue(new Callback<Products>() {
+            @Override
+            public void onResponse(Call<Products> call, Response<Products> response) {
 
-        Item item3 = new Item();
-        item3.setText("text3");
+                Products ItemList = response.body();
 
-        Item item4 = new Item();
-        item4.setText("text4");
+                Log.w("listItem add called",new Gson().toJson(response.body()));
 
-        Item item5 = new Item();
-        item5.setText("text5");
 
-        Item item6 = new Item();
-        item5.setText("text5");
+                for (int i = 0; i < 10; i++) {
+                    Item item = new Item();
+                    item.setPrice(ItemList.getProducts().get(i).getPrice());
+                    item.setTitle(ItemList.getProducts().get(i).getTitle());
+                    listItem.add(item);
+                }
 
-        for (int i = 0; i < 10; i++) {
-            listItem.add(item1);
-            listItem.add(item2);
-            listItem.add(item3);
-            listItem.add(item4);
-            listItem.add(item5);
-            listItem.add(item6);
-        }
-        listing.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ItemAdapter(this,listItem);
-        listing.setAdapter(adapter);
+                listing.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                adapter = new ItemAdapter(getApplicationContext(),listItem);
+                listing.setAdapter(adapter);
 
+
+            }
+
+            @Override
+            public void onFailure(Call<Products> call, Throwable t) {
+                String message = t.getMessage();
+                Log.d("failure", message);
+                Toast.makeText(getApplicationContext(), "An error has occured", Toast.LENGTH_LONG).show();
+            }
+
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.account_menu, menu);
         return true;
@@ -74,6 +90,7 @@ public class HomePage extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.viewAccount:{
+
                 Intent getIntent = getIntent();
                 String username = getIntent.getStringExtra("username");
 
