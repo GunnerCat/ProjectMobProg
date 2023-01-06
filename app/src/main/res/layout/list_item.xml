@@ -2,8 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="40px">
+    android:paddingBottom="40px"
+    android:padding="40px">
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item: "
+        android:lineSpacingExtra="40px"
+        android:textColor="@color/black"
+        android:id="@+id/item"/>
+    <TextView
+        android:layout_toRightOf="@id/item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -11,6 +20,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/item"
+        android:text="Price: "
+        android:textColor="@color/black"
+        android:id="@+id/price"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/price"
         android:textColor="@color/black"
         android:layout_below="@id/itemTitle"
         android:id="@+id/itemPrice"/>

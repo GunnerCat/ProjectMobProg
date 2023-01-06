@@ -55,7 +55,7 @@ public class HomePage extends AppCompatActivity {
                 Log.w("listItem add called",new Gson().toJson(response.body()));
 
 
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 20; i++) {
                     Item item = new Item();
                     item.setPrice(ItemList.getProducts().get(i).getPrice());
                     item.setTitle(ItemList.getProducts().get(i).getTitle());
